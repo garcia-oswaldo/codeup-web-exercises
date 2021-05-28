@@ -6,35 +6,40 @@
  * When called, the function should return a message that says hello to the passed in name.
  *
  * Example
- > sayHello("codeup") // returns "Hello, codeup!"
- * function sayHello(name){
- *     return "Hello" + name;
- * }sayHello(name);
- *
-
- *
+ * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name){
- var myName="Ozzy Garcia"
-    return "Hello" + name;
-}sayHello(name);
+function sayHello (name)
+{return "Hello" + " " + name;
+}
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
  *
  * console.log 'helloMessage' to check your work
- */
-/*var helloMessage= sayHello (name: "Kathleen")
-console.log(helloMessage;)
+ **/
+var helloMessage = sayHello("ozzy");
+    console.log(helloMessage);
+
+    /**
+    SO WHAT CONFUSED ME IS THAT WE HAVE THE FUNCTION BUT CALL IT OUTSIDE OF THE FUNCTION. I THINK AN
+    EXPLANATION OF WHAT IT MEANS TO CALL A FUNCTION WOULD HELP.
+
+   1. DO VARIABLES NEED TO BE INSIDE THE FUNCTION?
+   2. COULD THIS CODE BEEN INSIDE THE FUNCTION ?
+
+     **/
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
- */
-/*var myName="Ozzy Garcia";
-console.log(sayHello (myName));
+ **/
+var myName = "Ozzy";
+sayHello(myName);
+
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
