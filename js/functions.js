@@ -38,7 +38,7 @@ var helloMessage = sayHello("ozzy");
  **/
 var myName = "Ozzy";
 sayHello(myName);
-
+console.log(helloMessage);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -61,6 +61,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(Number){
+  if (Number ===2){
+  return true;}
+  else if (Number === 1){
+      return false;}
+  else if ( Number === 3){
+      return false;}
+} isTwo(random);
+  console.log("This" + Number +"has value" + return)
+  console.log("This" + Number +"has value" + return)
 
 /**
  * TODO:
