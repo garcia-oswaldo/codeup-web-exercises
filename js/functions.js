@@ -82,9 +82,10 @@ console.log(random + " is the number 2 is a " + isTwo(random) + " statment.")
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-var billTotal=33.42;
-var tipPercent=.15;
+
 function calculateTip(){
+    var billTotal=33.42
+    var tipPercent=0.15
     return billTotal*tipPercent;
 }
  console.log(calculateTip())
@@ -94,6 +95,14 @@ function calculateTip(){
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+function tipCalculation (){
+    var num1,num2,num3;
+    num1 =prompt("What is your bill total?");
+    num2 =prompt("What is the tip you want to give?");
+    alert("This is the Tip Amount: " + num1*num2);
+}tipCalculation();
+
+
 
 /**
  * TODO:
