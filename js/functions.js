@@ -69,8 +69,7 @@ function isTwo(Number){
   else if ( Number === 3){
       return false;}
 } isTwo(random);
-  console.log("This" + Number +"has value" + return)
-  console.log("This" + Number +"has value" + return)
+console.log(random + " is the number 2 is a " + isTwo(random) + " statment.")
 
 /**
  * TODO:
@@ -83,7 +82,12 @@ function isTwo(Number){
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+var billTotal=33.42;
+var tipPercent=.15;
+function calculateTip(){
+    return billTotal*tipPercent;
+}
+ console.log(calculateTip())
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
