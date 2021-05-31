@@ -96,10 +96,13 @@ function calculateTip(){
  * then display the dollar amount they should tip
  */
 function tipCalculation (){
-    var num1,num2,num3;
+    var num1,num2,
+
     num1 =prompt("What is your bill total?");
     num2 =prompt("What is the tip you want to give?");
-    alert("This is the Tip Amount: " + num1*num2);
+    var tip= (num1*num2);
+    var actualTip=tip.toFixed(2);
+    alert("This is the total tip: "+ actualTip);
 }tipCalculation();
 
 
