@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello (name)
-{return "Hello" + " " + name;
+{return "Hello," + name + "!";
 }
 
 /**
@@ -22,6 +22,8 @@ function sayHello (name)
 var helloMessage = sayHello("ozzy");
     console.log(helloMessage);
 
+helloMessage = sayHello("Code Up!");
+console.log(helloMessage);
     /**
     SO WHAT CONFUSED ME IS THAT WE HAVE THE FUNCTION BUT CALL IT OUTSIDE OF THE FUNCTION. I THINK AN
     EXPLANATION OF WHAT IT MEANS TO CALL A FUNCTION WOULD HELP.
@@ -122,16 +124,14 @@ function tipCalculation (){
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount (num1,num2) {
-    var originalPrice=45.99;
-    var discountPercentage=.12;
+function applyDiscount (originalPrice, discountPercentage) {
     var discountedPrice;
     var discount = originalPrice * discountPercentage;
     discountedPrice = originalPrice - discount;
     alert("Your price with discount is: " + discountedPrice.toFixed(2));
-
-}applyDiscount();
-
-
+}
+var originalPrice=45.99;
+var discountPercentage=.12;
+applyDiscount(originalPrice, discountPercentage);
 
 
