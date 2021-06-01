@@ -121,3 +121,17 @@ function tipCalculation (){
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount (num1,num2) {
+    var originalPrice=45.99;
+    var discountPercentage=.12;
+    var discountedPrice;
+    var discount = originalPrice * discountPercentage;
+    discountedPrice = originalPrice - discount;
+    alert("Your price with discount is: " + discountedPrice.toFixed(2));
+
+}applyDiscount();
+
+
+
+
