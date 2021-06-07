@@ -25,11 +25,7 @@ for(var index =0; index <=50;index++) {
 }
 
 
-/*var oddNumber
-while(true ){
-    oddNumber=parseInt(prompt("enter a number between 1 and 50"))
-    if (oddNumber %2 != 0)
-        break;*/
+
 
 
 
