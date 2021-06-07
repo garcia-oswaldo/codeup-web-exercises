@@ -24,7 +24,7 @@ for(var index =0; index <=50;index++) {
     }
 }
 
-
+/* do this as a dowhile loop
 
 
 
