@@ -62,7 +62,7 @@ const interest= .12;
          var discount = shopper.amount * interest;
          var total= shopper.amount-discount;
       if (shopper.amount <= 200){
-        console.log (shopper.name + shopper.amount + " your purchase is does not qualify for a discount");
+        console.log (shopper.name + shopper.amount + " your purchase does not qualify for a discount");
     } else
 {
    console.log( shopper.name + shopper.amount + "your discount is " + discount + "Your total discount " + interest + "Your total: " + total);
@@ -141,5 +141,7 @@ const interest= .12;
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();

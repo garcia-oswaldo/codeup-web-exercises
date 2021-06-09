@@ -2,10 +2,10 @@
 
 (function(){
     "use strict";
-
+/*
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
     var planetsArray;
-
+**/
     /**
      * TODO:
      * Convert planetsString to an array, and save it in a variable named
@@ -13,8 +13,12 @@
      * console.log planetsArray to check your work
      */
 
-    planetsArray= planetString.split("|");
-    console.log(planetsArray);
+   var  planetsString=['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
+   var planetsArray=planetsString;
+   console.log(planetsArray);
+
+
+
 
     /**
      * TODO:
@@ -29,10 +33,13 @@
 
 })();
 
-var planetArray = ["Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"];
+/*var planetArray = ["Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"];
 
 let newString = planetArray.join(""<br>"");
 
 console.log(newString);
 
 document.write(newString);
+
+   planetArray= planetString.split("|");
+    console.log(planetsArray);**/

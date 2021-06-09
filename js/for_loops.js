@@ -1,11 +1,11 @@
 /*alert("it is working")*/
-/* Show Multiplication by 7
-function showMultiplicationTable (x) {
+/*Show Multiplication by 7**/
+/*function showMultiplicationTable (x) {
     for (let y = 0; y<10; y++)
         console.log(x + " x " + y + "=" + (x * y));
 }showMultiplicationTable(7);
 
-
+**/
 
 function randomNumber() {
 
@@ -23,9 +23,9 @@ function randomNumber() {
       randomNumber();
 
 
-
+/**
 function tree(){
-    for (let x=1; x<10; x++){
+    for (let x=4; x<10; x++){
         var number="";
         number=x;
         for( let y = 1; y<x;y++){
@@ -36,15 +36,15 @@ function tree(){
     }
 }
 tree();
+**/
 
-*/
-
-for (let i=100; i>0; i=i-5){
+/**
+for (let i=100; i>0; i=i-3){
     let answer = i;
     if (answer < i){
-        answer = answer -5;
+        answer;
     }
     console.log(i);
 }
-
+**/
 
