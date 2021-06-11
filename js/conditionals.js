@@ -103,7 +103,7 @@ alert(analyzeColor(inputColor));
     }else if(luckyNumber ===1{
         return((totalAmount*0.10)-totalAmount;
     }else if (luckyNumber ===2){
-        return (totalAmount*0.25)--totalAmount;
+        return (totalAmount*0.25)-totalAmount;
     }else if (luckyNumber===3){
         return (totalAmount*0.35)-totalAmount;
     }else if (luckyNumber===4){

@@ -59,13 +59,13 @@ const interest= .12;
 
      shoppers.forEach (function (shopper){
         console.log(shopper)
-         var discount = shopper.amount * interest;
-         var total= shopper.amount-discount;
+         var discount = shopper.amount.toFixed(2) * interest.toFixed(2);
+         var total= shopper.amount.toFixed(2)-discount.toFixed(2);
       if (shopper.amount <= 200){
-        console.log (shopper.name + shopper.amount + " your purchase does not qualify for a discount");
+        console.log (shopper.name  +  shopper.amount.toFixed(2)  +  " your purchase does not qualify for a discount ");
     } else
 {
-   console.log( shopper.name + shopper.amount + "your discount is " + discount + "Your total discount " + interest + "Your total: " + total);
+   console.log( shopper.name  + shopper.amount.toFixed(2)  + " your discount is " + discount + " Your total discount " + interest.toFixed(2) + " Your total: " + total.toFixed(2));
 }})
 
 
@@ -128,8 +128,8 @@ const interest= .12;
     ]
     books.forEach (function (book){
        console.log("Book No:  " + book.bookN+ "\n"+
-           "This is the title of the book- " + book.title + "\n" + "This is the authors "
-           + book.author.firstName+ "\n" + book.author.lastName);
+           "This is the title of the book- " + book.title + "\n" + "This is the authors first name "
+           + book.author.firstName+ "\n" + "This is his last Name "+ book.author.lastName);
     })
     /**
      * Bonus:
