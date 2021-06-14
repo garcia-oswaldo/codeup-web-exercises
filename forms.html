@@ -10,18 +10,20 @@
   <h2>Welcome to our Registration Page</h2>
 
       <p>
-          <form method="POST" action="https://request-inspector.glitch.me/">
-              <label for="username">User Name</label>
-              <input id="username" name="username" type="text">
-              <lable for="password">Password</lable>
-              <input id="password" name="password" type="password">
-              <br>
-              <br>
-              <label for="bio"> Your Name</label>
-                <input id="bio" name="bio" type="text">
-        <br>
-        <textarea rows = "5" cols = "50" name = "description">
+          <form method="get" action="https://request-inspector.glitch.me/">
 
+        <label for="emailfield">Email</label>
+        <input id="emailfield" name="usersEmail" type="email" placeholder="Enter Email Here">
+        <br>
+        <label for="username">User Name</label>
+        <input id="username" name="username" type="text">
+        <lable for="password">Password</lable>
+        <input id="password" name="password" type="password">
+              <br>
+        <lable name="Bio" type="text">My Bio </lable>
+        <br>
+        <textarea rows = "5" cols = "50" name = "Your bio">
+This is your Bio
          </textarea>
 
 
@@ -29,17 +31,26 @@
     </section>
     <section>
                 <h3>How did you here about us</h3>
-        <input type="radio" name="name" value="a">billboard<br>
-        <input type="radio" name="name" value="a">radio advertisement<br>
-        <input type="radio" name="name" value="a">internet advertisement<br>
-        <input type="radio" name="name" value="a">Other<br>
+        <input id="billboard" type="radio" name="name" value="billboard">
+        <label for="billboard">billboard</label>
+        <br>
+        <input id="radio_advertisement" type="radio" name="name" value="radio_advertisement">
+        <lable for="radio_advertisement">radio advertisement</lable>
+        <br>
+        <input id="internet_advertisement" type="radio" name="name" value="internet_advertisement">
+        <label for"internet advertisement">internet advertisement</label>
+        <br>
+        <input id="other" type="radio" name="name" value="other">Other<br>
+        <label for"other"></label>
     </section>
       <hr>
       <h2>What browser are you using?</h2>
       <select name = "dropdown">
-          <option value = "Internet Explorer" selected>Internet Explorer</option>
+          <option disabled value = "Internet_Explorer" selected>Internet Explorer</option>
           <option value = "Chrome">Chrome</option>
-          <option value = "Opera">Opera</option>
+          <option selected value = "Safari">Safari</option>
+          <option  value = "Edge">Edge</option>
+          <option  value = "Safari">Opera</option>
           <option value = "Fire Fox">Fire Fox</option>
       </select>
       <br>
