@@ -1,4 +1,8 @@
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+.changeColor h1,h2,h3  {
+    text-decoration: underlin;
 }
