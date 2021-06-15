@@ -11,9 +11,14 @@ body, html {
     padding:.5em;
     border-radius:.5em;
 }
+
+:root{
+    --info-color:blue;
+    --info-bg-color:lightblue;
+}
 .message-info{
-    background-color:lightblue;
-    color:blue;
+    background-color: var(--info-bg-color);/*variable in code*/
+    color:blue; var(--info-color);
 }
 .message-success{
     background-color: lightgreen;
