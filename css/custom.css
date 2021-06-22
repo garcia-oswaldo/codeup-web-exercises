@@ -7,3 +7,30 @@ h1{
 background-color: white;
     opacity: 65%;
 }
+.card-footer{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgray;
+    text-align: right;
+}
+.card-header{
+   text-align: justify;
+   background-color: cornflowerblue;
+   /* !*text-decoration-color: #DDDDDD;*!*/
+}
+.card-body{
+
+    text-align: justify;
+    margin-bottom: 0px;
+}
+.inboxcard-header{
+background-color: lightgray;
+    text-align: justify;
+}
+p {
+    text-align: justify;
+}
+.form-check {
+
+}
+
