@@ -38,7 +38,7 @@ function capitalizeAllNames (str)
 {
 
     var arrayUpper = str.toUpperCase();
-    return upper;
+    return arrayUpper;
 }
 
 
