@@ -167,3 +167,25 @@ var people = [personOne,personTwo,personThree];
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
 //
 people.for
+
+
+// TODO: Create a function named getTallUsers that accepts an array of objects. The objects in the array will be in the same format
+//  as PersonOne, PersonTwo, and PersonThree. The functions job is to return an array of users that have heightInInches equal to or greater than 65.
+var people = [personOne,personTwo,personThree];
+
+function getTallUsers(arrayOfObjects){
+    var tallUsers=[];
+
+    for (let i = 0; i < arrayOfObjects.length; i++) {
+     var currentUser=arrayOfObjects[i];
+     var currentUserHeight=currentUser.heightInInches;
+
+     if(currentUserHeight >= 65){
+         tallUsers.push(currentUser)
+     }
+    }
+return tallUsers;
+}
+// Example: getTallUsers(people)
+// ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
+//                     {firstName: "dan", lastName: "valdarez", ageInYears: 61, heightInInches: 73}]
