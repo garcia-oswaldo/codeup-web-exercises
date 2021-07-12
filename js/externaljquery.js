@@ -1,6 +1,6 @@
 "use strict"
 
-$(document).ready(function(){
+// $(document).ready(function(){
     // var h1=$("#h1")
     //     console.log(h1)
     //
@@ -33,12 +33,12 @@ $(document).ready(function(){
     // //
     // //     Give another element an id of codeup. Does this element get a border now?
 
-    $('*').css('font-size', '70px');
-console.log('li');
-
-    $('h1,p,li').css('border-style', 'solid');
-    alert("h1 has changed")
-
+//     $('*').css('font-size', '70px');
+// console.log('li');
+//
+//     $('h1,p,li').css('border-style', 'solid');
+//     alert("h1 has changed")
+//
 
 
     //review with sly....
@@ -66,5 +66,73 @@ console.log('li');
 //     $('h1,p,li').css('background-color', 'yellow');
 //     $('li').css('border-style', 'solid');
 //     alert($('h1').html());
-// })
+
+
+    // Mark class on JQuery july 12th
+    // $("#codeup1").click(function(event){
+    //     alert("codeup1 clicked");
+    // });
+    //
+    // $("#codeup2").dblclick(function(event){
+    //     alert("codeup2 double-clicked");
+    // })
+    // $("#codeup3").hover(function(event) {
+    //     console.log('hoverin for codeup3');
+    //     $(this).css('background-color','black')
+    //     $(this).css('color','#ffffff')
+    // }, function(event){
+    //     console.log("hover out for codeup3")
+    //     $(this).css('background-color','white')
+    //     $(this).css('color','#000000')
+    //
+    //     $('#codeup3').hover(hoverIn, hoverOut);
+    //     $('#codeup2').hover(hoverIn, hoverOut);
+    // })
+
+
+
+
+        // Add jQuery code that will change the background color of an h1 element when clicked.
+        //
+        //  $("h1").click(function(event){
+        //      $(this).css('background-color', '#FFFF00');
+        //   });
+        // Make all paragraphs have a font size of 18px when they are double clicked.
+    //     $("p").dblclick(function(event){
+    //     $(this).css('font-size', '78px');
+    // });
+        // Set all li text color to red when the mouse is hovering; reset to black when it is not.
+    // $("li").hover(function(event) {
+    //
+    //        $(this).css('color','#FF0000')
+    //    }, function(event){
+    //        $(this).css('color','#000000')
+    //
+//     //      });
+//     $('#textfield').keydown(function() {
+//         // alert('A key was pushed down!');
+//     }
+//     $('#textfield').keydown(doKeyDown);
+//         console.log('akey was pressede');
+//     });
+//
+// $('#textfield').keyup(function() {
+//     alert('a key was released!');
+// });
+var allKeysPress="";
+$(document).ready(function(){
+
+function keyPressEventHandler(event){
+    console.log(event)
+    allKeysPress +=event.key;
+    var didKeySeq = (allKeysPress.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"))
+    if(didKeySeq){
+        allKeysPress="";
+        alert("hello")
+
+    }
+}
+$(document).keydown(keyPressEventHandler);
+
+});
 
