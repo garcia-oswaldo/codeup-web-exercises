@@ -120,7 +120,8 @@ mostOccuringNumber([8,93,-62.0,28,27,-62,32,8,-62]);
 mostOccuringNumber([73.5,8,0,-3,3.50,8.25,3.50]);
 // Should return the following
 3.5
-4))Create a function called whoIsPassing that accepts an array of objects, where each object is a student's name and class average (from 0 to 100). Your function will return an array of objects where each object is a student's name and whether he/she is passing. Note that a class average of 60 and higher is passing.
+4))Create a function called whoIsPassing that accepts an array of objects, where each object is a
+student's name and class average (from 0 to 100). Your function will return an array of objects where each object is a student's name and whether he/she is passing. Note that a class average of 60 and higher is passing.
     Examples
 var students = [
     {
@@ -266,7 +267,8 @@ reverseString("tilda");
 reverseString("2016-02-13");
 // Should return the following
 "31-21-6102"
-7))Create a function called numberInfo that accepts a number and returns an object with the properties isPositive, isEven, isZero. The properties should either be true or false based on if the parameter meets the criteria.
+7))Create a function called numberInfo that accepts a number and returns an object with the properties isPositive,
+isEven, isZero. The properties should either be true or false based on if the parameter meets the criteria.
 
    function numberInfo(number){
     var isNumberPostive =(number>0);

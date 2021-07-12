@@ -142,12 +142,6 @@ console.log(arrayOfStringsToObjects(["hello","dave"]))
 
 
 
-function arrayStings(arg1,arg2) {
-    var arg1 = array.from(arg1);
-    var arg2 = array.from(arg2);
-    var newArray = arg1.concat(arg2);
-    return newArray
-}
 
 function arrayOfObjectsToString(arrayOfObjectsParam){
     var results=[];
