@@ -128,7 +128,7 @@ function keyPressEventHandler(event){
     var didKeySeq = (allKeysPress.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"))
     if(didKeySeq){
         allKeysPress="";
-        alert("hello")
+        $('.codeup').css('border-style', 'solid');
 
     }
 }
