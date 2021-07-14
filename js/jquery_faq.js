@@ -1,23 +1,39 @@
 "use strict"
+-------------------------------------------------------------
+// $(document).ready(function() {
+//     $('#button').click(function(event) {
+//         event.preventDefault();
+//         $('#national-parks > li').last().css('background-color', '#FF0');
+//         $('#state-parks-texas > li').last().css('background-color', '#FF0');
+//         $('#kansas-national-park >li').last().css('background-color', '#FF0');
+//     });
+//     $('#national-parks-heading').click(function(event) {
+//                  event.preventDefault();
+//                  //toggle method invisible
+//                  $(this).next().children().css({'font-weight':'bold'});
+//     });
+//     $('li').click(function(){
+//         $(this).parent().children().first().css({'color':"blue"})
+//     })
+// });
 
-$(document).ready(function() {
-    $('#button').click(function(event) {
-        event.preventDefault();
-        $('#national-parks > li').last().css('background-color', '#FF0');
-        $('#state-parks-texas > li').last().css('background-color', '#FF0');
-        $('#kansas-national-park >li').last().css('background-color', '#FF0');
-    });
-    $('#national-parks-heading').click(function(event) {
-                 event.preventDefault();
-                 //toggle method invisible
-                 $(this).next().children().css({'font-weight':'bold'});
-    });
-    $('li').click(function(){
-        $(this).parent().children().first().css({'color':"blue"})
-    })
-});
+//UL highlighted  Answer-----------------------------------
+//$('#highlighter').click(function(){
+//   $('ul').each)functino(){
+//$(this).children().last().css('backgound-color', 'red)'
+// });
+-----------------------------------------------
+// H3 Font bold
+//$('h3').click()(function(){
+// $(this).next().children().css.({'font-weight', 'bold'});
+//})
 
-    // alert("hello");
+--------------------------------------------------------
+//$('li').click()(function(){
+// $(this).parent().children().first().css.({'color', 'blue'});
+//})
+
+//};    // alert("hello");
     // // adds class invisible to dd;
     // $('dd').addClass('invisible')
     // //css addeded invisible
