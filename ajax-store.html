@@ -27,18 +27,51 @@
 <script>
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax("data/inventory.json", {
-        type: "Get",
-        dataType: "json"
-
-    })
-        .done(function (data) {
-            var products=data[0]
-            var htmlMessage = '<tr>' + '<th>' +  products.title + '</th>' +
-                                        '<th>' +  products.title + '</th>' +
-                '<th>' +  products.title + '</th>''</tr>'
-            $('#insertProducts').html(htmlMessage)
-    });
+    // $.ajax("data/inventory.json", {
+    //     type: "Get",
+    //     dataType: "json"
+    //
+    // })
+    //     .done(function (data) {
+    //         var products=data[0]
+    //         var htmlMessage = '<tr>' + '<th>' +  products.title + '</th>' +
+    //                                     '<th>' +  products.quantity + '</th>' +
+    //                                     '<th>' +  products.categories + '</th>'+'' +
+    //                                      '<th>' +  products.price+ '</th>'+ + '</tr>'
+    //         $('#insertProducts').html(htmlMessage)
+    // });
+// $ getData();
+// function getData(){
+//     $.ajax("data/inventory.json").done (function(data) {
+//         var html="":
+//         $('#insterProducts').empty();
+//
+//         data.forEacdh(function (data) {
+//             //console.log(tool);
+//             html = '<tr> + < td > product.title </td> +
+//              <td> product.quantity </td> +
+//              < td > product.categories </td> +
+//              < td > product.price< /td>  +
+//              </tr>';
+//             $('#instertProducts').append(html);
+//         })
+//     }).fail(function(error){
+//     console.log(error);
+//     })
+// }
+//     setInterval(3000);
+//     $('#refresh').click(getData);
+//
+//
+    // })
+        // .done(function (data) {
+        //     var products=data[0]
+        //     var htmlMessage = '<tr>' + '<th>' +  products.title + '</th>' +
+        //         '<th>' +  products.quantity + '</th>' +
+        //         '<th>' +  products.categories + '</th>'+'' +
+        //         '<th>' +  products.price+ '</th>'+ + '</tr>'
+        //     $('#insertProducts').html(htmlMessage)
+        // });
 
     //     .fail(function (jqXhr, status, error) {
     //         alert("There was an error! Check the console for details");
@@ -53,6 +86,8 @@
     //       HINT: You will want to target #insertProducts for your new HTML elements
     // })
     // ();
+
+
 </script>
 
 </body>
