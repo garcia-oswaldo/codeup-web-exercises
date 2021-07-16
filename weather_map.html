@@ -2,126 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity=
             "sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weatherMap.css">
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
 
-<div class="topnav">
-    <label>Search by City</label>
-    <input type="text" placeholder="Search..">
-    <button id="button", type="submit" onclick="function f() {
-      
-    }"><img src="images/Sunny" /button>
-</div>
+<nav class="navbar navbar-dark bg-primary">
+    <h4 id="text">Weather App</h4>
+    <h4 id="text2">Current City</h4>
+</nav>
 <br>
-
-
-<h2>5 Day Forcast</h2>
-
-
-
-<div class="Daycard" style="width: 18rem;">
-    <div class="card-header">
-        Todays Weather
+<form class="form-inline">
+    <div class="form-group mb-2">
+        <p>Place</p>
+        <input type="password" class="form-control" id="location" placeholder="location">
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="timezone">Cras justo odio</li>
-        <li class="temperature">Dapibus ac facilisis in</li>
-        <li class="cloudiness">Vestibulum at eros</li>
-    </ul>
-</div>
-
-<div>
-<!--    MapGoesHere-->
-
-</div>
-
+    <button type="submit" class="btn btn-primary mb-2">Find</button>
+</form>
 <br>
-
-<div class="Daycard" style="width: 18rem;">
-    <div class="card-header">
-        Todays Weather
+<div class="d-flex justify-content-around">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        </div>
+<!--        <img src="..." class="card-img-top" alt="...">-->
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        </div>
+        <img src="..." class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        </div>
+        <img src="..." class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        </div>
+        <img src="..." class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        </div>
+        <img src="..." class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="timezone">Cras justo odio</li>
-        <li class="temperature">Dapibus ac facilisis in</li>
-        <li class="cloudiness">Vestibulum at eros</li>
-    </ul>
+
 </div>
-<br>
-
-<br>
-
-<div class="Daycard" style="width: 18rem;">
-    <div class="card-header">
-        Todays Weather
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="timezone">Cras justo odio</li>
-        <li class="temperature">Dapibus ac facilisis in</li>
-        <li class="cloudiness">Vestibulum at eros</li>
-    </ul>
+<div class="justify-content-center">
+<div id='map'  style='width: 100vw; height: 100vh'></div>
 </div>
-<br>
-
-<div class="Daycard" style="width: 18rem;">
-    <div class="card-header">
-        Todays Weather
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="timezone">Cras justo odio</li>
-        <li class="temperature">Dapibus ac facilisis in</li>
-        <li class="cloudiness">Vestibulum at eros</li>
-    </ul>
-</div>
-<br>
-
-<br>
-
-<div class="Daycard" style="width: 18rem;">
-    <div class="card-header">
-        Todays Weather
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="timezone">Cras justo odio</li>
-        <li class="temperature">Dapibus ac facilisis in</li>
-        <li class="cloudiness">Vestibulum at eros</li>
-    </ul>
-</div>
-
-
 <script src="./js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-    "use strict";
-    $(document).ready(function (){
-        $.get(`https://api.openweathermap.org/data/2.5/weather`, {
-            appid: OpenWeatherAPIKey,
-            q:     "Austin, US",
-            units: "imperial"
-        }).done(function(data) {
-            console.log(data);
-        });
-    })
 
+    mapboxgl.accessToken = mapboxAPIKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 5,
+        center: [-98.4916, 29.4252]
+    });
+
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        appid: OpenWeatherAPIKey,
+        lat:    29.423017,
+        lon:   -98.48527,
+        units: "imperial"
+    }).done(function(data) {
+        console.log('5 day forecast', data);
+    });
+    // $(document).ready(function () {
+    //     $.get(`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`, {
+    //         appid: OpenWeatherAPIKey,
+    //         q: "Austin, US",
+    //         units: "imperial"
+    //     }).done(function (data) {
+    //         console.log(data);
+    //     });
+    // })
 
 
 </script>
+
 </body>
 </html>
 
-
-<!--Create a new HTML file called weather_map.html.-->
-<!--As you complete each step, commit your changes and push them to GitHub.-->
-<!--Using HTML, CSS, jQuery, AJAX, and the OpenWeatherMap API, start by showing the current conditions for city you live in on your page.-->
-<!--Update your layout and AJAX request(s) to display a five day forecast for the city you live in that looks like the screenshot below.-->
-<!--If you want to add the icons the URLs for OpenWeatherMap's icons are formatted like: http://openweathermap.org/img/w/[icon].png where [icon] comes from the API response.-->
-<!--Refer to your Mapbox API exercise. Recreate the map below your 5 day forecast. Read through the documentation for the Mapbox API and figure out how to allow the user to drop a pin on any place on the map. Once the user drops a pin, grab its coordinates and feed those into your OpenWeatherMap API. Update the five-day forecast with the information from those coordinates (you should also get rid of your input boxes at this point).-->
-<!--Add a Mapbox text input to search by location and have the forecast update when a new location is searched.-->
-<!--As a bonus make sure you can update the marker's position to the new search result.-->

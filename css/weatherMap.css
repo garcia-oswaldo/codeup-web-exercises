@@ -1,17 +1,25 @@
-.topnav{
 
-
-
-}
-#button{
-    padding: 1em;
-    margin-left: 1em;
-    margin
+.navbar navbar-dark bg-primary{
+    font-size: small;
 }
 .Daycard{
     border: 1px solid #000;
 }
-
+p{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.btn btn-primary mb-2{
+    text-decoration-color: #FFFFFF;
+}
+#text{
+    color: #FFFFFF;
+    font-size: small;
+}
+#text2{
+    color: #FFFFFF;
+    font-size: small;
+}
 .card-header{
 background-color: lightblue;
     border: 1px solid #000;
