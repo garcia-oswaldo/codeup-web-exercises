@@ -25,8 +25,19 @@
     <button type="submit" class="btn btn-primary mb-2">Find</button>
 </form>
 <br>
-<div class="d-flex justify-content-around">
+
+<div id="weatherCard" class="d-flex justify-content-around">
     <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Current Local Weather</h5>
+        </div>
+       <img className="img-fluid" src={day.weather[0].icon}>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>    <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
         </div>
@@ -40,7 +51,7 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
         </div>
-        <img src="..." class="card-img-top" alt="...">
+<!--        <img src="..." class="card-img-top" alt="...">-->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
@@ -50,7 +61,7 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
         </div>
-        <img src="..." class="card-img-top" alt="...">
+<!--        <img src="..." class="card-img-top" alt="...">-->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
@@ -60,17 +71,7 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
         </div>
-        <img src="..." class="card-img-top" alt="...">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-    </div>    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-        </div>
-        <img src="..." class="card-img-top" alt="...">
+<!--        <img src="..." class="card-img-top" alt="...">-->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
@@ -99,25 +100,54 @@ $(document).ready(function() {
         zoom: 5,
         center: [-98.58941, 29.47114]
     });
+
     getWeatherInfo(-98.58941, 29.47114);
 
     function getWeatherInfo(myLong, myLat) {
         $.get("https://api.openweathermap.org/data/2.5/onecall", {
             appid: OpenWeatherAPIKey,
-            lat: myLat
-            long: myLong
+            lat: myLat,
+            lon: myLong,
             units: "imperial"
-        }).done(function (data) {
-            console.log('5 day forecast', data);
+        }).done(function (weatherData) {
+            console.log('5 day forecast', weatherData);
+
+            $("#weatherCard").html("")
+
+            weatherData.daily.forEach(function (day) {
+                const unixTime = day.dt;
+                const date = new Date(unixTime*1000);
+                var dateString= date.toLocaleDateString("en-US")
+                console.log(date.toLocaleDateString("en-US"));
+                var iconcode= day.weather[0].icon;
+                var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+
+                var dailyWeather =
+
+                `<div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Todays Weather</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Temperature: ${day.temp.day}</h6>
+                    <img src="${iconurl}" />
+                    <p class="card-text">${day.weather[0].description}</p>
+                    <p class="card-text">Humidity  ${day.humidity}/p>
+                  </div>
+                </div>`
+
+                // console.log(dailyWether)
+
+                $("#weatherCard").append(dailyWeather)
+
+                // console.log(day.temp.max)
+
+
+
+            })
         });
     }
 
+})
 
-    var marker = new mapboxgl.Marker()
-        .setLngLat([-98.58941, 29.47114])
-        .addTo(map);
-
-});
 
 
 
