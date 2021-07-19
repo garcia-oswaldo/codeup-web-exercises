@@ -87,32 +87,40 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
+'use strict'
+
+$(document).ready(function() {
+
 
     mapboxgl.accessToken = mapboxAPIKey;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 5,
-        center: [-98.4916, 29.4252]
+        center: [-98.58941, 29.47114]
     });
+    getWeatherInfo(-98.58941, 29.47114);
 
-    $.get("https://api.openweathermap.org/data/2.5/onecall", {
-        appid: OpenWeatherAPIKey,
-        lat:    29.423017,
-        lon:   -98.48527,
-        units: "imperial"
-    }).done(function(data) {
-        console.log('5 day forecast', data);
-    });
-    // $(document).ready(function () {
-    //     $.get(`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`, {
-    //         appid: OpenWeatherAPIKey,
-    //         q: "Austin, US",
-    //         units: "imperial"
-    //     }).done(function (data) {
-    //         console.log(data);
-    //     });
-    // })
+    function getWeatherInfo(myLong, myLat) {
+        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            appid: OpenWeatherAPIKey,
+            lat: myLat
+            long: myLong
+            units: "imperial"
+        }).done(function (data) {
+            console.log('5 day forecast', data);
+        });
+    }
+
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.58941, 29.47114])
+        .addTo(map);
+
+});
+
+
+
 
 
 </script>

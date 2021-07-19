@@ -21,50 +21,50 @@
     center: [-98.491142, 29.424349]
   });
 
-  // var marker = new mapboxgl.Marker()
-  //         .setLngLat([-98.45251678925071,29.567244316609294])
-  //         .addTo(map);
-  //
+  var marker = new mapboxgl.Marker()
+          .setLngLat([-98.45251678925071,29.567244316609294])
+          .addTo(map);
+
   // var popup = new mapboxgl.Popup()
   //         // .setLngLat([-98.45251678925071,29.567244316609294])
   //         .setHTML("<img width='50px' height='auto' src='https://static01.nyt.com/images/2021/02/17/dining/17tootired-grilled-cheese/17tootired-grilled-cheese-articleLarge.jpg?quality=75&auto=webp&disable=upscale' >")
   //         // .setMaxWidth("100px")
   //         .addTo(map)
-  //
-  //
-  // marker.setPopup(popup)
-var restaurants=[
-  {
-    restaurantname:"Wendy's", address:"5121 Northwest Loop 410, San Antonio, TX 78229"},
-  {
-    restaurantname:"Las Palapas", address:"5403 Northwest Loop 410, San Antonio, TX 78229"},
-  {
-    restaurantname:"Olive Garden", address:"6155 Northwest Loop 410, San Antonio, TX 78238"}
-]
-  // var locationToSearchFor = "8005 Callaghan Rd, San Antonio, TX 78230"
 
-
-  restaurants.forEach(function(singlerestaurant){
-    geocode(singlerestaurant.address,mapboxAPIKey).then(function(restaurantCoordinates){
-console.log('restaurantCoordinates' + restaurantCoordinates)
-      var lasPalapasMarker= new mapboxgl.Marker()
-              .setLngLat(restaurantCoordinates)
-              .addTo(map);
-
-      var lasPalapasPopUp = new mapboxgl.Popup()
-              // .setLngLat([-98.45251678925071,29.567244316609294])
-              .setHTML(singlerestaurant.restaurantname)
-      // .setMaxWidth("100px")
-      .addTo(map)
-
-      lasPalapasMarker.setPopup(lasPalapasPopUp)
-  })
-    // console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
-    // console.log(restaurantCoordinates)
-
-
-
-  })
+//
+//   marker.setPopup(popup)
+// var restaurants=[
+//   {
+//     restaurantname:"Wendy's", address:"5121 Northwest Loop 410, San Antonio, TX 78229"},
+//   {
+//     restaurantname:"Las Palapas", address:"5403 Northwest Loop 410, San Antonio, TX 78229"},
+//   {
+//     restaurantname:"Olive Garden", address:"6155 Northwest Loop 410, San Antonio, TX 78238"}
+// ]
+//   // var locationToSearchFor = "8005 Callaghan Rd, San Antonio, TX 78230"
+//
+//
+//   restaurants.forEach(function(singlerestaurant){
+//     geocode(singlerestaurant.address,mapboxAPIKey).then(function(restaurantCoordinates){
+// console.log('restaurantCoordinates' + restaurantCoordinates)
+//       var lasPalapasMarker= new mapboxgl.Marker()
+//               .setLngLat(restaurantCoordinates)
+//               .addTo(map);
+//
+//       var lasPalapasPopUp = new mapboxgl.Popup()
+//               // .setLngLat([-98.45251678925071,29.567244316609294])
+//               .setHTML(singlerestaurant.restaurantname)
+//       // .setMaxWidth("100px")
+//       .addTo(map)
+//
+//       lasPalapasMarker.setPopup(lasPalapasPopUp)
+//   })
+//     // console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
+//     // console.log(restaurantCoordinates)
+//
+//
+//
+//   })
 
 
 
