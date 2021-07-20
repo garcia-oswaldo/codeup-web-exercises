@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/weatherMap.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+
 </head>
 <body>
 
+<pre id="coordinates" class="coordinates"></pre>
 <nav class="navbar navbar-dark bg-primary">
     <h4 id="text">Weather App</h4>
     <h4 id="text2">Current City</h4>
@@ -20,7 +22,7 @@
 <form class="form-inline">
     <div class="form-group mb-2">
         <p>Place</p>
-        <input type="password" class="form-control" id="location" placeholder="location">
+        <input type="text" class="form-control" id="location" placeholder="location">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Find</button>
 </form>
@@ -79,10 +81,13 @@
         </ul>
     </div>
 
+
 </div>
 <div class="justify-content-center">
-<div id='map'  style='width: 100vw; height: 100vh'></div>
+    <div id='map'  style='width: 100vw; height: 100vh'></div>
 </div>
+
+
 <script src="./js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -92,7 +97,6 @@
 
 $(document).ready(function() {
 
-
     mapboxgl.accessToken = mapboxAPIKey;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -100,6 +104,11 @@ $(document).ready(function() {
         zoom: 5,
         center: [-98.58941, 29.47114]
     });
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-98.58941, 29.47114])
+        .addTo(map);
 
     getWeatherInfo(-98.58941, 29.47114);
 
@@ -145,13 +154,19 @@ $(document).ready(function() {
             })
         });
     }
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        map.setCenter([lngLat.lng,lngLat.lat])
+        map.setZoom(5)
+        // coordinates.style.display = 'block';
+        // coordinates.innerHTML =
+        //     'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+        getWeatherInfo(lngLat.lng,lngLat.lat)
+        console.log(lngLat)
+    }
 
+    marker.on('dragend', onDragEnd);
 })
-
-
-
-
-
 
 </script>
 
