@@ -1,23 +1,23 @@
         "use strict"
 
-        // $(document).ready(function(){
-            // var h1=$("#h1")
-            //     console.log(h1)
-            //
-            // alert("the Dom is finished loading")
-        // $('h1','p','ul')
-        //     console.log('h1','p','ul')
-        // $('#p1')
-        //     console.log('#p1')
-        //
-        // $('#list1').html()
-        //     console.log($('#list1, li'))
-        //
-        // alert($('#p1').html())
-        //     // $('#p1,#p2').html('vatos locos forever') this changes html in p1,p2
-        //     $('#p1,#p2').html()
-        //     console.log($('#p1,#p2').html())
-        //     //logs what is in the html on p1,p2
+        $(document).ready(function(){
+            var h1=$("#h1")
+                console.log(h1)
+
+            alert("the Dom is finished loading")
+        $('h1','p','ul')
+            console.log('h1','p','ul')
+        $('#p1')
+            console.log('#p1')
+
+        $('#list1').html()
+            console.log($('#list1, li'))
+
+        alert($('#p1').html())
+            // $('#p1,#p2').html('vatos locos forever') this changes html in p1,p2
+            $('#p1,#p2').html()
+            console.log($('#p1,#p2').html())})
+            //logs what is in the html on p1,p2
 
             //Second exercise
 
@@ -119,20 +119,20 @@
         // $('#textfield').keyup(function() {
         //     alert('a key was released!');
         // });
-        var allKeysPress="";
-        $(document).ready(function(){
-
-    function keyPressEventHandler(event){
-        console.log(event)
-        allKeysPress +=event.key;
-        var didKeySeq = (allKeysPress.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"))
-        if(didKeySeq){
-            allKeysPress="";
-            $('.codeup').css('border-style', 'solid');
-
-        }
-    }
-    $(document).keydown(keyPressEventHandler);
-
-    });
-
+    //     var allKeysPress="";
+    //     $(document).ready(function(){
+    //
+    // function keyPressEventHandler(event){
+    //     console.log(event)
+    //     allKeysPress +=event.key;
+    //     var didKeySeq = (allKeysPress.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"))
+    //     if(didKeySeq){
+    //         allKeysPress="";
+    //         $('.codeup').css('border-style', 'solid');
+    //
+    //     }
+    // }
+    // $(document).keydown(keyPressEventHandler);
+    //
+    // });
+    //

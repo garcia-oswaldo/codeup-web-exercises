@@ -1,52 +1,52 @@
 "use strict"
-
-$(document).ready(function() {
-    $('#button').click(function(event) {
-        event.preventDefault();
-        $('#national-parks > li').last().css('background-color', '#FF0');
-        $('#state-parks-texas > li').last().css('background-color', '#FF0');
-        $('#kansas-national-park >li').last().css('background-color', '#FF0');
-    });
-    $('#national-parks-heading').click(function(event) {
-                 event.preventDefault();
-                 //toggle method invisible
-                 $(this).next().children().css({'font-weight':'bold'});
-    });
-    $('li').click(function(){
-        $(this).parent().children().first().css({'color':"blue"})
-    })
-});
-
-//UL highlighted  Answer-----------------------------------
-//$('#highlighter').click(function(){
-//   $('ul').each)functino(){
-//$(this).children().last().css('backgound-color', 'red)'
+//
+// $(document).ready(function() {
+//     $('#button').click(function(event) {
+//         event.preventDefault();
+//         $('#national-parks > li').last().css('background-color', '#FF0');
+//         $('#state-parks-texas > li').last().css('background-color', '#FF0');
+//         $('#kansas-national-park >li').last().css('background-color', '#FF0');
+//     });
+//     $('#national-parks-heading').click(function(event) {
+//                  event.preventDefault();
+//                  //toggle method invisible
+//                  $(this).next().children().css({'font-weight':'bold'});
+//     });
+//     $('li').click(function(){
+//         $(this).parent().children().first().css({'color':"blue"})
+//     })
 // });
 
+//UL highlighted  Answer-----------------------------------
+// $('#highlighter').click(function(){
+//   $('ul').each)functino(){
+// $(this).children().last().css('backgound-color', 'red)'
+// });
+//
 // H3 Font bold
 // $('h3').click()(function(){
 // $(this).next().children().css.({'font-weight', 'bold'});
 // })
 
-// -----------------------------------------------------
-//$('li').click()(function(){
-// $(this).parent().children().first().css.({'color', 'blue'});
-//})
+-----------------------------------------------------
+$('li').click()(function(){
+$(this).parent().children().first().css.({'color', 'blue'});
+})
 
-//};    // alert("hello");
-    // // adds class invisible to dd;
-    // $('dd').addClass('invisible')
-    // //css addeded invisible
-    // //add clickevent to toggle invisible
-    // $('#push').click(function(event) {
-    //     event.preventDefault();
-    //     //toggle method invisible
-    //     $('dd').toggleClass('invisible');
-    // });
-    // $('dt').click(function(){
-    //     $(this).css('background-color', 'yellow')
-
-    // Exercises
+};    // alert("hello");
+    // adds class invisible to dd;
+    $('dd').addClass('invisible')
+    //css addeded invisible
+    //add clickevent to toggle invisible
+    $('#push').click(function(event) {
+        event.preventDefault();
+        //toggle method invisible
+        $('dd').toggleClass('invisible');
+    });
+    $('dt').click(function(){
+        $(this).css('background-color', 'yellow')
+//
+//     // Exercises
     // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
     //
     //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3

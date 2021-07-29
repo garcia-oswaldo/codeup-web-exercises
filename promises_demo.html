@@ -24,21 +24,82 @@
   // });
   // console.log("end of script");
   //         // .catch(error => console.error(error));
-  fetch('https://api.github.com/users')  //1. make fetch call to github
-      .then(function(response){
-          // console.log(response);
-          let aPromise = response.json();   //grabb json date from response
-          console.log(aPromise);
-          // return response.json();  // then returns promise
-          return aPromise;
-      }).then(function(jsonData){
-      console.log(jsonData);       //3 do something with that json data
-  }).catch(function(error){
-      console.log("error!!!!",error)
-  })
+  // fetch('https://api.github.com/users')  //1. make fetch call to github
+  //     .then(function(response){
+  //         // console.log(response);
+  //         let aPromise = response.json();   //grab json date from response
+  //         console.log(aPromise);
+  //         // return response.json();  // then returns promise
+  //         return aPromise;
+  //     }).then(function(jsonData){
+  //     console.log(jsonData);       //3 do something with that json data
+  // }).catch(function(error){
+  //     console.log("error!!!!",error)
+  // })
+  //4  move fetch json result into a function resulting in cleaner initial call.
+  //1. get users from github
 
-  console.log("end of script");
-  // .catch(error => console.error(error));
+  // function getUsersFromGithubAsJSON(){
+  //     //1. make the fetch call to github
+  //     //2. return json () promise
+  //     return fetch ("http://api.github.com/users")
+  //     .then(function(response){
+  //         return response.json();
+  //     });
+  //
+  // }
+  //
+  // getUsersFromGithubAsJSON()
+  //   .then(function( userData){
+  //      for(const user of userData) {
+  //           console.log(user);
+  //       }
+  //
+  //   });
+
+  //5. make a function that returns a new promise
+
+  // function makeNewPromise(){
+  //     let myPromise=new Promise(function(resolve,reject){
+  //       // return resolve ("hey the promise created successfully");
+  //      // return  reject("so sad, broken promise");
+  //     });
+  //     return myPromise
+  // }
+  // makeNewPromise()
+  // .then(function(msg){
+  //     console.log(msg);
+  // }).catch(function(error){
+  //     console.log("Error!", error);
+  // });
+  function makeNewPromise(promiseMsg){
+      let myPromise=new Promise(function(resolve,reject){
+          return resolve ("hey the promise created successfully" + promiseMsg);
+          // return  reject("so sad, broken promise");
+      });
+      return myPromise
+  }
+  makeNewPromise("oh my new promise")
+      .then(function(msg){
+          console.log(msg);
+      }).catch(function(error){
+      console.log("Error!", error);
+  });
+
+
+  console.log('end of script');
+  // fetch('https://api.github.com/users')  //1. make fetch call to github
+  // .then(function(response){
+  //   // console.log(response);
+  //   let aPromise = response.json();   //grabb json date from response
+  //   console.log(aPromise);
+  //   // return response.json();  // then returns promise
+  //   return aPromise;
+  // }).then(function(jsonData){
+  //   console.log(jsonData);       //3 do something with that json data
+  // });
+  // console.log("end of script");
+  // // .catch(error => console.error(error));
 
 </script>
 
