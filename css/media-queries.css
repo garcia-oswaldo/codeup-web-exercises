@@ -1,0 +1,147 @@
+@media screen and (min-width:320px) and (max-width: 767px) {
+    /** {*/
+    /*    box-sizing: border-box;*/
+    /*    !*}*!*/
+    /*    !*body {*!*/
+    /*    !*    margin: 0;*!*/
+    /*    !*}*!*/
+    /*    !*nav {*!*/
+    /*    !*    display: flex;*!*/
+    /*    !*    background: #333333;*!*/
+    /*    !*}*!*/
+
+    /*    !*.nav-items{*!*/
+    /*    !*    display: flex;*!*/
+
+    /*    !*}*!*/
+    /*    !*ul {*!*/
+    /*    !*    list-style: none;*!*/
+    /*    !*    padding: 0;*!*/
+    /*    !*    margin: 0;*!*/
+    /*    !*}*!*/
+    /*    !*nav a {*!*/
+    /*    !*    text-decoration: none;*!*/
+    /*    !*    color: white;*!*/
+    /*    !*    font-family: Verdana;*!*/
+    /*    !*}*!*/
+    /*    !*nav a:hover {*!*/
+    /*    !*    background: black;*!*/
+    /*    !*}*!*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+
+    body {
+
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.alert-info.hidden-on-desktop {
+        display: flex;
+        justify-content: center;
+        background-color: lightblue;
+        border: 0;
+        padding: 15px;
+        border: solid 1px black;
+        margin: 15px;
+
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        padding: 25px;
+        text-decoration: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: white;
+        align-self: center;
+        list-style: none;
+    }
+
+    nav {
+        justify-content: space-between;
+        background-color: lightblue;
+
+    }
+
+    .nav-items {
+        /*display: flex;*/
+        /*justify-content: center;*/
+    }
+
+    .nav-link {
+        align-self: center;
+    }
+
+    li {
+        border: solid 1px black;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        margin: 5px;
+        background-color: lightgray;
+
+    }
+
+    h2 {
+        /*margin-top: 20px;*/
+        /*margin-bottom: 15px;*/
+        margin: 20px;
+    }
+
+    p {
+        margin: 20px;
+    }
+
+    footer {
+        margin-top: 150px;
+    }
+
+    img {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width:768px){
+    div{
+        display: flex;
+        flex-direction: row;
+    }
+    h1{
+        /*display: flex;*/
+        /*justify-content: center;*/
+    }
+
+    div.alert-info.hidden-on-desktop {
+        display: none;
+        justify-content: center;
+        background-color: lightblue;
+        border: 0;
+        padding: 15px;
+        border: solid 1px black;
+        margin: 15px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        background-color: lightblue;
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+    }
